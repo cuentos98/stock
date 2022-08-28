@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, Helvetica;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgb(9, 201, 185) 57%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin: 0;
+
+    --colorFondoSecundario: rgb(0, 23, 128);
+    --colorFondoInterno: white;
+    --colorFuenteTabla: white;
+    --colorHoverBoton: rgb(10, 207, 214);
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin: auto;
+}
+
+.menu li a {
+    text-decoration: none;
+    display: block;
+    color: white;
+    padding: 1.5vh;
+    border-radius: 3vh;
+}
+
+.menu li {
+    display: inline-block;
+    text-align: auto;
+    min-width: 50%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    border-radius: 3vh;
+}
+
+.itemMenu {
+    background: black;
+    text-decoration: none;
+    font-size: 4.5vh;
+    cursor: pointer;
+    border: 3px solid white;
+    border-style: inset;
+    word-wrap: break-word;
+
+    transition: all 1s;
+}
+
+.itemMenu:hover {
+    background: var(--colorHoverBoton);
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+    text-align: center;
+}
+
+input[type=button] {
+    background: black;
+    color: white;
+    font-size: 16px;
+    width: 80%;
+    margin: 5px;
+    cursor: pointer;
+}
+
+input[type=button]:hover {
+    background: var(--colorHoverBoton);
+
+}
+
+td {
+    padding-left: 10px;
+    padding-right: 10px;
+    color: var(--colorFuenteTabla);
+}
+
+td,
+th {
+    border: 2px solid black;
+}
+
+th {
+    background-color: var(--colorFondoSecundario);
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#tablaVacia {
+    border: none;
+    opacity: 0;
+}
+
+td:first-child {
+    background-color: var(--colorFondoSecundario);
+    display: flex;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+td {
+    background-color: var(--colorFondoInterno);
+    color: black;
+}
+
+form {
+    background-color: white;
+    display: flex;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+    border: 8px inset black;
+    padding: 10px;
+}
+
+h3 {
+    text-align: center;
+}
+
+button {
+    background: black;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    color: azure;
+
+}
+
+#homeWrapper {
+    display: grid;
+    /* SE UTILIZA EL DISPLAY: GRID PARA DEFINIR UNA GRILLA EN EL BODY Y PODER SEGMENTAR LOS CONTENEDORES */
+    grid-template-columns: 0.3fr 0.7fr;
+    /* SE DIFINE LA CANTIDAD DE COLUMNAS Y EL TAMAÑO */
+    grid-template-rows: 1fr;
+    /* SE DEFINE LA CANTIDAD DE LINEAS Y EL TAMAÑO */
+    margin: 0;
+    height: 100vh;
+}
+
+#navHome {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainHome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 8.5vh;
+    padding: 2vh;
+}
+
+#sideNav {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    top: 0;
+
+    width: 0;
+    height: 100vh;
+
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition: all 1s;
+}
+
+#botonCierraNav {
+    position: absolute;
+    top: 2%;
+    left: 85%;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    font-size: 5.5vh;
+}
+
+#botonCierraNav:hover {
+    color: var(--colorHoverBoton);
+    transition: all 0.5s;
+}
+
+#botonAbreNav {
+    position: sticky;
+    top: 2%;
+    left: 3%;
+    color: black;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    font-size: 5.5vh;
+}
+
+#botonAbreNav:hover {
+    color: white;
+    transition: all 0.5s;
+}
+
+#botonHome {
+    position: absolute;
+    top: 2.21%;
+    left: 12%;
+
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    border: none;
+    padding: 0;
+    font-size: 5.5vh;
+}
+
+#botonHome:hover {
+    color: var(--colorHoverBoton);
+    transition: all 0.5s;
+}
