@@ -6,13 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
     <title>Document</title>
 </head>
 <body>
 
     <button id="botonAbreNav" onclick="abreNav()"><i class="fas fa-home"></i></button>
 
-    <div id="sideNav">
+    <div id="sideNav" class="navCerrado">
         <button id="botonHome" onclick="location.href='index.php'"><i class="fas fa-home"></i></button>
         
         <button id="botonCierraNav" onclick="cierraNav()"><i class="far fa-times-circle"></i></button>

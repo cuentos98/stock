@@ -1,10 +1,12 @@
-body {
+﻿body {
     font-family: Arial, Helvetica;
-    background: linear-gradient(45deg, rgba(0, 0, 0, 1) 0%, rgb(9, 201, 185) 57%);
+    background: linear-gradient(45deg, black 0%, var(--colorMainGradiente)  57%);
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0;
     margin: 0;
+
+    --colorMainGradiente: rgb(9, 201, 185);
 
     --colorFondoSecundario: rgb(0, 23, 128);
     --colorFondoInterno: white;
@@ -17,6 +19,10 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+    text-align: center;
 }
 
 .menu {
@@ -38,8 +44,8 @@ body {
     display: inline-block;
     text-align: auto;
     min-width: 50%;
-    margin-top: 4vh;
-    margin-bottom: 4vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     border-radius: 3vh;
 }
 
@@ -117,18 +123,10 @@ td {
 
 form {
     background-color: white;
-    display: flex;
-    width: 30%;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 70%;
     margin: auto;
     border: 8px inset black;
-    padding: 10px;
-}
-
-h3 {
-    text-align: center;
+    font-size: 1.2rem;
 }
 
 button {
@@ -138,12 +136,6 @@ button {
     cursor: pointer;
     padding: 10px;
     text-align: center;
-}
-
-h2 {
-    text-align: center;
-    color: azure;
-
 }
 
 #homeWrapper {
@@ -162,6 +154,7 @@ h2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 #mainHome {
@@ -170,35 +163,46 @@ h2 {
     align-items: center;
     font-size: 8.5vh;
     padding: 2vh;
+    height: 100vh;
+    color: azure;
 }
 
 #sideNav {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
     display: flex;
     justify-content: center;
     align-items: center;
 
     position: fixed;
     top: 0;
+    z-index: 3;
 
-    width: 0;
     height: 100vh;
-
-    opacity: 0;
 
     overflow: hidden;
 
-    transition: all 1s;
+    transition: all 1.2s;
+}
+
+.navAbierto {
+    width: 30vw;
+    opacity: 1;
+}
+
+
+.navCerrado {
+    width: 0;
+    opacity: 0;
 }
 
 #botonCierraNav {
     position: absolute;
     top: 2%;
-    left: 85%;
+    left: 78%;
     background: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
-    font-size: 5.5vh;
+    font-size: 3rem;
 }
 
 #botonCierraNav:hover {
@@ -207,19 +211,20 @@ h2 {
 }
 
 #botonAbreNav {
-    position: sticky;
-    top: 2%;
+    position: fixed;
+    z-index: 2;
+    top: 1.7%;
     left: 3%;
     color: black;
     background: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
-    font-size: 5.5vh;
+    font-size: 3rem;
+    transition: all 1s;
 }
 
 #botonAbreNav:hover {
     color: white;
-    transition: all 0.5s;
 }
 
 #botonHome {
@@ -231,10 +236,71 @@ h2 {
     background: rgba(0, 0, 0, 0);
     border: none;
     padding: 0;
-    font-size: 5.5vh;
+    font-size: 3rem;
 }
 
 #botonHome:hover {
     color: var(--colorHoverBoton);
     transition: all 0.5s;
+}
+
+#overlay {
+    position: fixed;
+    z-index: 1;
+
+    width: 0vw;
+    height: 0vh;
+
+    opacity: 0;
+    background-color: #000;
+
+    transition: opacity 0.75s;
+}
+
+.botonForm {
+    font-size: 1.8rem !important;
+    color: white !important;
+}
+
+@media (max-aspect-ratio: 12/10) {
+    .itemMenu {
+        font-size: 4vw;
+    }
+
+    #mainHome {
+        font-size: 5.5vw;
+    }
+
+    .navAbierto {
+        width: 100vw;
+        opacity: 1;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    #botonAbreNav {
+        top: 1%;
+        /*top: auto;
+        bottom: 15%;
+        left: 5%;
+        background-color: var(--colorHoverBoton);
+        border-radius: 20vh;
+        border: 3px solid black;
+        padding: 1.5vh 2vh;*/
+    }
+
+    #form {
+        padding: 0;
+        margin: 0;
+    }
+
+    #main h1 {
+        position: sticky !important;
+        background-color: var(--colorMainGradiente);
+        box-shadow: 0 0 0 8px black;
+        top: 0;
+        margin: 0;
+    }
 }
