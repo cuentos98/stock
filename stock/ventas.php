@@ -50,7 +50,7 @@
                     </div>
 
                     <div class="input-group-text">
-                        <a class="btn btn-dark px-3 py-0 fs-4 botonNuevo" href="#" role="button">Nueva venta</a>
+                        <a class="btn btn-dark px-3 py-0 fs-4 botonNuevo" href="venta_agregar_selecCliente.php" role="button">Nueva venta</a>
                     </div>
 
                     <div class="input-group-text">

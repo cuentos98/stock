@@ -257,6 +257,7 @@ button {
 .botonForm {
     font-size: 1.8rem !important;
     color: white !important;
+    width: 4vw;
 }
 
 .botonTarjetas {
@@ -322,6 +323,18 @@ button {
 .container {
     width: 80% !important;
 }
+
+.form-select {
+    cursor: pointer;
+}
+
+option:first-child {
+    color: red;
+    display: none;
+    visibility: hidden;
+}
+
+
 
 @media ((max-width: 769px) or (max-aspect-ratio: 11/10) ) {
     .itemMenu {
